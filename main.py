@@ -37,7 +37,7 @@ if files:
                 mime = "text/csv"
                 new_name = file.name.replace(ext, "csv")
             else:
-                df.to_excel(output, index=False)
+                df.to_excel(output, index=False, engine="openpyxl")
                 mime = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                 new_name = file.name.replace(ext, "xlsx")
             output.seek(0)
